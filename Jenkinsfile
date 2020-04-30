@@ -17,7 +17,7 @@ pipeline {
       steps {
       sh "mvn clean package" 
       }
-    
+    }
         stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
@@ -27,4 +27,4 @@ pipeline {
     }
   }
   }
-}
+
